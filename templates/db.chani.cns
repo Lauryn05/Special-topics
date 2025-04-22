@@ -1,0 +1,18 @@
+;
+; BIND reverse data file for local loopback interface
+;
+$TTL	604800
+@	IN	SOA	chani.cns. root.chani.cns. (
+			      2		; Serial
+			 604800		; Refresh
+			  86400		; Retry
+			2419200		; Expire
+			 604800 )	; Negative Cache TTL
+;
+@	IN	NS	chani.cns.
+@	IN	A	10.0.2.15
+@   IN  MX  10  mail
+
+special.1.srv    IN A   10.0.2.15
+www IN  CNAME   special.1.srv
+mail    IN  A   10.0.2.15
